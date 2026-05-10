@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "superpowers",
+  "version": "${version}",
+  "name": "Superpowers",
+  "description": "Gives the player superpowers: flight, super speed, and super strength.",
+  "authors": [
+    "You"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/superpowers/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.superpowers.mod.SuperpowersMod"
+    ],
+    "client": [
+      "com.superpowers.mod.client.SuperpowersClient"
+    ]
+  },
+  "mixins": [
+    "superpowers.mixins.json",
+    {
+      "config": "superpowers.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
